@@ -8,27 +8,65 @@
 
 .timer__display {
     font-size: 3rem;
-    margin-bottom: 1.5rem;
     font-weight: bold;
     color: #333;
+    margin-bottom: 20px;
 }
 
 .timer__buttons button {
+    padding: 10px 20px;
     font-size: 1rem;
-    padding: 0.7rem 1.5rem;
-    margin: 0 0.5rem;
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    border-radius: 8px;
-    background-color: #1976d2;
-    color: white;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 .timer__buttons button:hover {
-    background-color: #1565c0;
+    background-color: #0056b3;
 }
 
 .timer__buttons button:active {
     transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+    .button-text {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .timer__buttons button {
+        padding: 10px;
+    }
+
+    .button-icon {
+        margin-right: 0;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .timer__buttons button {
+        padding: 5px;
+    }
+
+    .button-icon {
+        margin-right: 0;
+        width: 30px;
+        height: 30px;
+    }
 }

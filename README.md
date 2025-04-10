@@ -49,10 +49,10 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 &emsp;└── timer.css
 ├── js   
 &emsp;└── script.js   
-└── img/         
+└── img         
 &emsp;└── favicon.ico   
 &emsp;└── og_image_v1.png
-
+└── README.md
 ---
 
 ## 📌 Future Plans

@@ -13,5 +13,46 @@ body {
     margin-top: 10%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .timer__display {
+        font-size: 2.5rem;
+    }
+    .timer__buttons button {
+        padding: 8px 15px;
+    }
 }

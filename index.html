@@ -10,8 +10,6 @@
     <meta name="keywords" content="timer, stopwatch, html, css, javascript, frontend project">
 
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-<!--    <link rel="icon" href="https://dor-ka.github.io/frontend-vanilla-js-timer-app/img/favicon.ico" type="image/x-icon">-->
-
 
     <meta property="og:title" content="Timer App">
     <meta property="og:description"
@@ -45,9 +43,18 @@
         <section class="timer">
             <div id="display" class="timer__display">00:00:00</div>
             <div class="timer__buttons">
-                <button id="start" aria-label="Start timer">Start</button>
-                <button id="stop" aria-label="Stop timer">Stop</button>
-                <button id="reset" aria-label="Reset timer">Reset</button>
+                <button id="start" aria-label="Start timer">
+                    <img src="img/btn_start.png" alt="Start icon" class="button-icon">
+                    <span class="button-text">Start</span>
+                </button>
+                <button id="stop" aria-label="Stop timer">
+                    <img src="img/btn_stop.png" alt="Start icon" class="button-icon">
+                    <span class="button-text">Stop</span>
+                </button>
+                <button id="reset" aria-label="Reset timer">
+                    <img src="img/btn_reset.png" alt="Start icon" class="button-icon">
+                    <span class="button-text">Reset</span>
+                </button>
             </div>
         </section>
     </main>
