@@ -25,11 +25,14 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 ### v0.1
 - [x] Basic HTML structure with display and buttons
 - [x] Minimalistic styling
-- [x] Start / Stop / Reset logic
-- [x] Display minutes and seconds
 - [x] Custom favicon added
 - [x] SEO-friendly meta tags (Open Graph, Twitter Cards)
 - [x] Google Fonts for improved typography
+
+### v0.2
+- [x] Start / Stop / Reset logic
+- [x] Display minutes seconds and milliseconds
+- [x] Timer logic and display updates
 
 ---
 
@@ -54,7 +57,6 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 
 ## 📌 Future Plans
 
-- Add milliseconds to the display
 - Add "Lap" feature to save intervals
 - Improve UI with subtle animations
 - Keyboard shortcuts for controlling the timer
