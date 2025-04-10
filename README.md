@@ -27,6 +27,9 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 - [x] Minimalistic styling
 - [x] Start / Stop / Reset logic
 - [x] Display minutes and seconds
+- [x] Custom favicon added
+- [x] SEO-friendly meta tags (Open Graph, Twitter Cards)
+- [x] Google Fonts for improved typography
 
 ---
 
@@ -38,9 +41,14 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 
 ## 📁 Folder Structure
 ├── index.html    
-├── style.css   
-└── script.js   
-
+├── css   
+&emsp;└── style.css   
+&emsp;└── timer.css
+├── js   
+&emsp;└── script.js   
+└── img/         
+&emsp;└── favicon.ico   
+&emsp;└── og_image_v1.png
 
 ---
 
