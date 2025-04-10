@@ -30,13 +30,25 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-<div class="timer">
-    <div id="display" class="timer__display">00:00:00</div>
-    <div class="timer__buttons">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <button id="reset">Reset</button>
-    </div>
+<div class="container">
+    <header>
+        <h1>Timer App</h1>
+    </header>
+
+    <main>
+        <section class="timer">
+            <div id="display" class="timer__display">00:00:00</div>
+            <div class="timer__buttons">
+                <button id="start" aria-label="Start timer">Start</button>
+                <button id="stop" aria-label="Stop timer">Stop</button>
+                <button id="reset" aria-label="Reset timer">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Dorota Karpinska ©2025</p>
+    </footer>
 </div>
 </body>
 </html>
