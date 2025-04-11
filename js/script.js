@@ -65,4 +65,12 @@
 
     startButton.addEventListener('click', startStopTimer);
     resetButton.addEventListener('click', resetTimer);
+
+    document.addEventListener('keydown', function (event) {
+        if (event.code === 'Space') {
+            event.preventDefault();
+            startStopTimer();
+        }
+    });
+
 }
