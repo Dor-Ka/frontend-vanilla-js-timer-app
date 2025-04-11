@@ -66,13 +66,23 @@
     startButton.addEventListener('click', startStopTimer);
     resetButton.addEventListener('click', resetTimer);
 
+    let spacePressed = false;
+
     document.addEventListener('keydown', function (event) {
-        if (event.code === 'Space') {
+        if (event.code === 'Space' && !spacePressed) {
             event.preventDefault();
             startStopTimer();
-        } else if (event.code === "KeyR") {
+            spacePressed = true;
+        } else if (event.code === 'KeyR') {
             resetTimer();
         }
     });
+
+    document.addEventListener('keyup', function (event) {
+        if (event.code === 'Space') {
+            spacePressed = false;
+        }
+    });
+
 
 }
