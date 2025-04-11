@@ -70,6 +70,8 @@
         if (event.code === 'Space') {
             event.preventDefault();
             startStopTimer();
+        } else if (event.code === "KeyR") {
+            resetTimer();
         }
     });
 
