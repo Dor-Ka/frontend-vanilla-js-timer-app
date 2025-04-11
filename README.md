@@ -2,14 +2,6 @@
 
 A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS**, and **Vanilla JavaScript**.
 
-## 🧠 Project Goals
-
-- Practice DOM manipulation with vanilla JavaScript
-- Build core functionality using `setInterval`
-- Focus on clean code and modular structure
-- Apply responsive design principles
-- Prepare for extending functionality in future versions
-
 ---
 
 ## 📦 Tech Stack
@@ -19,6 +11,37 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 - Vanilla JavaScript (ES6+)
 
 ---
+
+## 🎹 Keyboard & Sound Support
+
+### Keyboard Support
+You can control the timer using the `Space` key (Start/Stop toggle).
+
+> 💡 `MediaPlayPause` key was considered, but due to inconsistent browser and OS-level behavior, it wasn't implemented.
+
+### Sound Support
+The timer now plays a ticking sound while running, which loops until the timer is stopped or reset.
+
+---
+
+## 🚀 Live Demo
+
+👉 [Check out the live demo on GitHub Pages](#) (Coming soon)
+
+---
+
+## 🖼️ Screenshots
+
+Here’s a preview of how the Timer App looks:
+
+![Screenshot 1](path_to_screenshot_1.png)
+*Main Timer View*
+
+![Screenshot 2](path_to_screenshot_2.png)
+*Timer Running with Sound*
+
+---
+
 
 ## 🔧 Features
 
@@ -43,11 +66,10 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 - [x] Combined Start and Stop into a single toggle button
 - [x] Updated UI icons to reflect button state (Start/Stop)
 
----
-
-## 🚀 Live Demo
-
-👉 Coming soon via GitHub Pages...
+### v0.5
+- [x] Added keyboard support using `Space` key to Start/Stop the timer
+- [x] Implemented ticking sound that loops while the timer is running
+- [x] Considered `MediaPlayPause` key but skipped due to inconsistent support
 
 ---
 
