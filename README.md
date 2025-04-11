@@ -34,6 +34,10 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 - [x] Display minutes seconds and milliseconds
 - [x] Timer logic and display updates
 
+### v0.3
+- [x] Added ticking sound while the timer is running
+- [x] Sound loops during timer operation and stops when timer is stopped or reset
+
 ---
 
 ## 🚀 Live Demo
@@ -43,15 +47,17 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 ---
 
 ## 📁 Folder Structure
-├── index.html    
 ├── css   
 &emsp;└── style.css   
-&emsp;└── timer.css
-├── js   
-&emsp;└── script.js   
+&emsp;└── timer.css   
 └── img         
 &emsp;└── favicon.ico   
-&emsp;└── og_image_v1.png
+&emsp;└── og_image_v1.png  
+├── js   
+&emsp;└── script.js     
+└── sounds         
+&emsp;└── tick.mp3   
+├── index.html    
 └── README.md
 ---
 
