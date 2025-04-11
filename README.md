@@ -38,6 +38,11 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 - [x] Added ticking sound while the timer is running
 - [x] Sound loops during timer operation and stops when timer is stopped or reset
 
+### v0.4
+- [x] Simplified timer controls from 3 buttons to 2
+- [x] Combined Start and Stop into a single toggle button
+- [x] Updated UI icons to reflect button state (Start/Stop)
+
 ---
 
 ## 🚀 Live Demo
