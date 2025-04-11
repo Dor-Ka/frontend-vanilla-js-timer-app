@@ -44,13 +44,11 @@ The timer now plays a ticking sound while running, which loops until the timer i
 
 ## 🖼️ Screenshots
 
-Here’s a preview of how the Timer App looks:
-
-![Screenshot 1](path_to_screenshot_1.png)
-*Main Timer View*
-
-![Screenshot 2](path_to_screenshot_2.png)
-*Timer Running with Sound*
+Here’s a preview of how the Timer App looks:   
+*Main Timer View:*
+![Screenshot 1](./img/screenshot_readme_01.png)
+*Timer Running with History:*
+![Screenshot 2](/img/screenshot_readme_02.png)
 
 ---
 
@@ -90,31 +88,34 @@ Here’s a preview of how the Timer App looks:
 - [x] Debounced `Space` key to prevent multiple triggers on key hold
 - [x] Added time persistence with localStorage (timer state and current time are saved and restored after page refresh)
 
+### v0.6
+
+- [x] Added "History of Measurements" section
+- [x] Timer records the duration of each session with date and time
+- [x] Display history of recorded times with clear history button
+- [x] UI improvements: Added headers for each history record, better layout
+- [x] Added responsive design for small screens
 
 ---
 
 ## 📁 Folder Structure
 
 ├── css   
+&emsp;└── history.css  
 &emsp;└── style.css   
 &emsp;└── timer.css   
 └── img         
 &emsp;└── favicon.ico   
 &emsp;└── og_image_v1.png  
+&emsp;└── btn_reset.png  
+&emsp;└── btn_start.png  
+&emsp;└── btn_stop.png  
 ├── js   
 &emsp;└── script.js     
 └── sounds         
 &emsp;└── tick.mp3   
 ├── index.html    
 └── README.md
----
-
-## 📌 Future Plans
-
-- Add "Lap" feature to save intervals
-- Improve UI with subtle animations
-- Keyboard shortcuts for controlling the timer
-
 ---
 
 ## 📄 License
