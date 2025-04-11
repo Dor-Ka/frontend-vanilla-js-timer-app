@@ -7,10 +7,9 @@
     let timerInterval;
 
     const startButton = document.querySelector('#start');
-    const stopButton = document.querySelector('#stop');
+    const startIcon = document.querySelector('#start-icon');
     const resetButton = document.querySelector('#reset');
     const display = document.querySelector('#display');
-    let lastBeepTime = 0;
 
     function playBeep() {
         beepSound.currentTime = 0;
@@ -22,12 +21,20 @@
         };
     }
 
-    function startTimer() {
+    function startStopTimer() {
         if (!running) {
             startTime = Date.now() - currentTime;
             timerInterval = setInterval(updateTime, 10);
+            startIcon.src = 'img/btn_stop.png';
+            startButton.querySelector('.button-text').textContent = 'Stop';
             running = true;
             playBeep();
+        } else {
+            clearInterval(timerInterval);
+            startIcon.src = 'img/btn_start.png';
+            startButton.querySelector('.button-text').textContent = 'Start';
+            running = false;
+            beepSound.pause();
         }
     }
 
@@ -44,23 +51,18 @@
         return num < 10 ? `0${num}` : num;
     }
 
-    function stopTimer() {
-        clearInterval(timerInterval);
-        running = false;
-        beepSound.pause();
-    }
 
     function resetTimer() {
         clearInterval(timerInterval);
         running = false;
         currentTime = 0;
         display.textContent = '00:00:00';
-        lastBeepTime = 0;
         beepSound.pause();
         beepSound.currentTime = 0;
+        startIcon.src = 'img/btn_start.png';
+        startButton.querySelector('.button-text').textContent = 'Start';
     }
 
-    startButton.addEventListener('click', startTimer);
-    stopButton.addEventListener('click', stopTimer);
+    startButton.addEventListener('click', startStopTimer);
     resetButton.addEventListener('click', resetTimer);
 }
