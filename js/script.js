@@ -1,4 +1,6 @@
 {
+    const beepSound = document.getElementById('beep');
+
     let startTime = 0;
     let currentTime = 0;
     let running = false;
@@ -8,12 +10,24 @@
     const stopButton = document.querySelector('#stop');
     const resetButton = document.querySelector('#reset');
     const display = document.querySelector('#display');
+    let lastBeepTime = 0;
+
+    function playBeep() {
+        beepSound.currentTime = 0;
+        beepSound.play();
+
+        beepSound.onended = () => {
+            beepSound.currentTime = 0;
+            beepSound.play();
+        };
+    }
 
     function startTimer() {
         if (!running) {
             startTime = Date.now() - currentTime;
             timerInterval = setInterval(updateTime, 10);
             running = true;
+            playBeep();
         }
     }
 
@@ -33,6 +47,7 @@
     function stopTimer() {
         clearInterval(timerInterval);
         running = false;
+        beepSound.pause();
     }
 
     function resetTimer() {
@@ -40,6 +55,9 @@
         running = false;
         currentTime = 0;
         display.textContent = '00:00:00';
+        lastBeepTime = 0;
+        beepSound.pause();
+        beepSound.currentTime = 0;
     }
 
     startButton.addEventListener('click', startTimer);
