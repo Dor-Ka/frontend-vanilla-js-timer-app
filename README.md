@@ -88,6 +88,8 @@ Here’s a preview of how the Timer App looks:
 - [x] Considered `MediaPlayPause` key but skipped due to inconsistent support
 - [x] Added support for `R` key to reset the timer
 - [x] Debounced `Space` key to prevent multiple triggers on key hold
+- [x] Added time persistence with localStorage (timer state and current time are saved and restored after page refresh)
+
 
 ---
 

@@ -11,6 +11,39 @@
     const resetButton = document.querySelector('#reset');
     const display = document.querySelector('#display');
 
+    function saveTime() {
+        localStorage.setItem('currentTime', currentTime);
+        localStorage.setItem('startTime', startTime);
+        localStorage.setItem('running', running);
+    }
+
+    function loadTime() {
+        if (localStorage.getItem('currentTime') && localStorage.getItem('startTime')) {
+            currentTime = parseInt(localStorage.getItem('currentTime'));
+            startTime = parseInt(localStorage.getItem('startTime'));
+            running = localStorage.getItem('running') === 'true';
+
+            if (running) {
+                timerInterval = setInterval(updateTime, 10);
+                startIcon.src = 'img/btn_stop.png';
+                startButton.querySelector('.button-text').textContent = 'Stop';
+                playBeep();
+            }
+            display.textContent = formatTime(currentTime);
+        }
+    }
+
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60000);
+        const seconds = Math.floor((time % 60000) / 1000);
+        const milliseconds = Math.floor((time % 1000) / 10);
+        return `${pad(minutes)}:${pad(seconds)}:${pad(milliseconds)}`;
+    }
+
+    function pad(num) {
+        return num < 10 ? `0${num}` : num;
+    }
+
     function playBeep() {
         beepSound.currentTime = 0;
         beepSound.play();
@@ -36,21 +69,15 @@
             running = false;
             beepSound.pause();
         }
+        saveTime();
     }
 
     function updateTime() {
         currentTime = Date.now() - startTime;
-        const minutes = Math.floor(currentTime / 60000);
-        const seconds = Math.floor((currentTime % 60000) / 1000);
-        const milliseconds = Math.floor((currentTime % 1000) / 10);
 
-        display.textContent = `${pad(minutes)}:${pad(seconds)}:${pad(milliseconds)}`;
+        display.textContent = formatTime(currentTime);
+        saveTime();
     }
-
-    function pad(num) {
-        return num < 10 ? `0${num}` : num;
-    }
-
 
     function resetTimer() {
         clearInterval(timerInterval);
@@ -61,7 +88,11 @@
         beepSound.currentTime = 0;
         startIcon.src = 'img/btn_start.png';
         startButton.querySelector('.button-text').textContent = 'Start';
+        saveTime();
     }
+
+    document.addEventListener('DOMContentLoaded', loadTime);
+
 
     startButton.addEventListener('click', startStopTimer);
     resetButton.addEventListener('click', resetTimer);
@@ -83,6 +114,5 @@
             spacePressed = false;
         }
     });
-
 
 }

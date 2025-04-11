@@ -25,14 +25,6 @@
     margin: 5px;
 }
 
-.button-icon {
-    width: 50px;
-    height: 50px;
-    margin: 0px;
-    vertical-align: middle;
-    border-radius: 50%;
-}
-
 .timer__buttons button:hover {
     background-color: #0056b3;
     color: #fff;
@@ -40,6 +32,14 @@
 
 .timer__buttons button:active {
     transform: scale(0.95);
+}
+
+.button-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 @media (max-width: 600px) {
