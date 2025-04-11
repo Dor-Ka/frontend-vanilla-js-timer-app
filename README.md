@@ -16,7 +16,12 @@ A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS
 
 ### 🎹 Keyboard Support
 
-You can control the timer using the `Space` key (Start/Stop toggle) and the `R` key to reset the timer.
+You can control the timer using your keyboard:
+
+- `Space` – toggle **Start/Stop**
+- `R` – **Reset** the timer
+
+> 💡 The `Space` key is now debounced to prevent multiple triggers when held down, improving control and preventing accidental multiple toggles.
 
 > 💡 `MediaPlayPause` key was considered, but due to inconsistent browser and OS-level behavior, it wasn't implemented.
 
@@ -81,6 +86,8 @@ Here’s a preview of how the Timer App looks:
 - [x] Added keyboard support using `Space` key to Start/Stop the timer
 - [x] Implemented ticking sound that loops while the timer is running
 - [x] Considered `MediaPlayPause` key but skipped due to inconsistent support
+- [x] Added support for `R` key to reset the timer
+- [x] Debounced `Space` key to prevent multiple triggers on key hold
 
 ---
 
