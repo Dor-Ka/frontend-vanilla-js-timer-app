@@ -29,9 +29,15 @@ You can control the timer using your keyboard:
 
 The timer now plays a ticking sound while running, which loops until the timer is stopped or reset.
 
+### 🌓 Dark Mode
+
+You can now switch between **Light** and **Dark** mode using the button in the top-right corner.
+
+> 🌙 The app remembers your preference using `localStorage`, so your theme stays consistent even after refreshing or closing the browser.
+
 ### 📱 Responsiveness
 
- The app is fully responsive and works on screens as small as 300px.
+The app is fully responsive and works on screens as small as 300px.
 
 ---
 
@@ -46,9 +52,9 @@ The timer now plays a ticking sound while running, which loops until the timer i
 
 Here’s a preview of how the Timer App looks:   
 *Main Timer View:*
-![Screenshot 1](./img/screenshot_readme_01.png)
+![Screenshot 1](./img/screenshot_readme_01_v2.png)
 *Timer Running with History:*
-![Screenshot 2](/img/screenshot_readme_02.png)
+![Screenshot 2](/img/screenshot_readme_02_v2.png)
 
 ---
 
@@ -95,6 +101,13 @@ Here’s a preview of how the Timer App looks:
 - [x] Display history of recorded times with clear history button
 - [x] UI improvements: Added headers for each history record, better layout
 - [x] Added responsive design for small screens
+
+### v0.7
+
+- [x] Implemented **Dark Mode** support
+- [x] Added **theme toggle button (🌓)** in top-right corner
+- [x] User preference is saved in `localStorage` and auto-applied on load
+- [x] Theme button styled to match light/dark appearance
 
 ---
 
