@@ -108,12 +108,15 @@ Here’s a preview of how the Timer App looks:
 - [x] Added **theme toggle button (🌓)** in top-right corner
 - [x] User preference is saved in `localStorage` and auto-applied on load
 - [x] Theme button styled to match light/dark appearance
+- [x] Last measurement is now stored in localStorage and appears at the top of the history list
 
 ---
 
 ## 📁 Folder Structure
 
 ├── css   
+&emsp;└── dark-mode.css  
+&emsp;└── theme-toggle.css  
 &emsp;└── history.css  
 &emsp;└── style.css   
 &emsp;└── timer.css   
@@ -123,6 +126,8 @@ Here’s a preview of how the Timer App looks:
 &emsp;└── btn_reset.png  
 &emsp;└── btn_start.png  
 &emsp;└── btn_stop.png  
+&emsp;└── screenshot_readme_01_v2 .png  
+&emsp;└── screenshot_readme_02_v2 .png  
 ├── js   
 &emsp;└── script.js     
 └── sounds         
