@@ -29,6 +29,8 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/dark-mode.css"/>
+    <link rel="stylesheet" href="css/theme-toggle.css"/>
     <link rel="stylesheet" href="css/timer.css"/>
     <link rel="stylesheet" href="css/history.css"/>
 
@@ -37,6 +39,8 @@
 <body>
 <div class="container">
     <header>
+        <button id="toggle-dark-mode" aria-label="Toggle dark mode" class="theme-toggle" title="Toggle dark mode">🌓</button>
+
         <h1>Timer App</h1>
     </header>
 
@@ -57,7 +61,6 @@
         <section id="history">
             <h2>History of Measurements</h2>
             <ul id="history-list">
-
             </ul>
             <button id="clear-history" aria-label="Clear history">Clear History</button>
         </section>

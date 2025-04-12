@@ -1,0 +1,64 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode header h1,
+body.dark-mode footer p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .timer {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .timer__display {
+    color: #ffffff;
+}
+
+body.dark-mode .timer__buttons button {
+    background-color: #2196f3;
+    color: #ffffff;
+}
+
+body.dark-mode .timer__buttons button:hover {
+    background-color: #0b7dda;
+}
+
+body.dark-mode #history {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode #history h2,
+body.dark-mode #history-list li .history-item-header {
+    color: #f0f0f0;
+}
+
+body.dark-mode #history-list li {
+    background-color: #1c1c1c;
+    color: #ccc;
+}
+
+body.dark-mode #clear-history {
+    background-color: #e53935;
+}
+
+body.dark-mode #clear-history:hover {
+    background-color: #c62828;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #333;
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #444;
+}

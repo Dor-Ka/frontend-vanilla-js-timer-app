@@ -1,0 +1,19 @@
+.theme-toggle {
+    top: 20px;
+    right: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    background-color: #d5d5d5;
+}
