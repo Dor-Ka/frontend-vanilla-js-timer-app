@@ -22,8 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
     }
+
+    loadLastMeasurement();
 });
 
+function saveLastMeasurement(time) {
+    localStorage.setItem('lastMeasurement', time);
+}
 
 function addToHistory(duration) {
     const history = getHistory();
@@ -33,6 +38,7 @@ function addToHistory(duration) {
     };
     history.push(newRecord);
     saveHistory(history);
+    saveLastMeasurement(duration);
     displayHistory();
 }
 
@@ -73,7 +79,6 @@ function displayHistory() {
     });
 }
 
-
 function formatTime(ms) {
     const minutes = Math.floor(ms / 60000);
     const seconds = Math.floor((ms % 60000) / 1000);
@@ -100,6 +105,29 @@ function loadTime() {
         display.textContent = formatTime(currentTime);
     }
     displayHistory();
+}
+
+function loadLastMeasurement() {
+    const lastMeasurement = localStorage.getItem('lastMeasurement');
+    if (lastMeasurement) {
+        const historyList = document.querySelector('#history-list');
+
+        const listItem = document.createElement('li');
+        listItem.classList.add('history__item', 'history__item--last'); // stylizujemy specjalnie
+
+        const header = document.createElement('div');
+        header.classList.add('history-item-header');
+        header.textContent = 'Last Measurement (saved):';
+
+        const body = document.createElement('div');
+        body.classList.add('history-item-body');
+        body.textContent = `Duration: ⏱️ ${formatTime(lastMeasurement)}`;
+
+        listItem.appendChild(header);
+        listItem.appendChild(body);
+
+        historyList.insertBefore(listItem, historyList.firstChild);
+    }
 }
 
 function playBeep() {
@@ -154,7 +182,6 @@ function resetTimer() {
 startButton.addEventListener('click', startStopTimer);
 resetButton.addEventListener('click', resetTimer);
 
-// Debounce the Space key to avoid repeated presses
 let spacePressed = false;
 document.addEventListener('keydown', function (event) {
     if (event.code === 'Space' && !spacePressed) {
