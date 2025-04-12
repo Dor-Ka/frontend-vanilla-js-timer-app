@@ -50,7 +50,7 @@ function displayHistory() {
 
         const body = document.createElement('div');
         body.classList.add('history-item-body');
-        body.textContent = `Duration: ${formatTime(record.time)}`;
+        body.textContent = `Duration: ⏱️ ${formatTime(record.time)}`;
 
         listItem.appendChild(header);
         listItem.appendChild(body);
