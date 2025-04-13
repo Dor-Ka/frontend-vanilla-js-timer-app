@@ -1,6 +1,7 @@
 .theme-toggle {
-    top: 20px;
-    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #e0e0e0;
     color: #333;
     border: none;
@@ -11,6 +12,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 .theme-toggle:hover {
