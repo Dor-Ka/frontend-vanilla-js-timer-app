@@ -1,5 +1,9 @@
 # ⏱️ Timer App (Vanilla JS)
 
+[![Build Status](https://img.shields.io/github/workflow/status/Dor-Ka/frontend-vanilla-js-timer-app/CI)](https://github.com/Dor-Ka/frontend-vanilla-js-timer-app/actions)
+[![Deploy Status](https://img.shields.io/website?url=https%3A%2F%2Fdor-ka.github.io/frontend-vanilla-js-timer-app)](https://dor-ka.github.io/frontend-vanilla-js-timer-app)
+[![License](https://img.shields.io/github/license/Dor-Ka/frontend-vanilla-js-timer-app)](https://opensource.org/licenses/MIT)
+
 A simple and minimalistic timer/stopwatch application built with **HTML**, **CSS**, and **Vanilla JavaScript**.
 
 ---
